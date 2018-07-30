@@ -6,8 +6,17 @@ Painel de Controle de Dados em R
 ## INSTALAÇÃO
 
 ## PRINCIPAIS COMANDOS
+
 ### Column {data-width=150}
   Similar ao frameset (html), cria uma coluna com x pixels
+
+### ```{r}      ```
+  Estabelece o espaço (scope) dos comandos   
+
+### selctInput, sliderInput, fileInput, pickerInput
+
+
+
 
 ## EXEMPLOS
 
