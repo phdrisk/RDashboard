@@ -1,0 +1,98 @@
+---
+title: "PHDRISK DASHBOARD"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+runtime: shiny    
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(biclust)
+library(dplyr)
+library(shiny)
+library(shinyWidgets)
+
+options(shiny.maxRequestSize = 400*1024^2) 
+
+```
+
+Column {data-width=150}
+-----------------------------------------------------------------------
+
+### Menu
+
+```{r}
+selectInput("cluster", label=h3("Intervalo"),
+            choices = list("100"=100,"200"=200,"300"=300,"400"=400,"500"=500),
+            selected = 100
+            )
+
+sliderInput("ajust", label="Número de Classes", min=10, max=50, value=15, step=5)
+
+
+  # Input: Select a file ----
+  fileInput("file1", "Choose CSV File",
+                multiple = FALSE,
+                accept = c("text/csv",
+                         "text/comma-separated-values,text/plain",
+                         ".csv"))
+
+
+cities <- c("City A", "City B", "City C", "City D", "City E")
+regions <- c("Region M", "Region N", "Region O")
+countries <- c("Country Z", "Country X", "Country Y", "Country W")
+geography_all <- as.factor(c(cities, regions, countries))
+year <- as.factor(2011:2014)
+
+
+pickerInput("All", "Choose", multiple = T,choices = list(City = cities, Region = regions, Country = countries),options = list(`max-options` = 4,size = 10))
+
+
+
+
+trend <- reactive({df %>% 
+      filter(geography %in% input$All) %>% 
+      arrange(year) %>% 
+      droplevels()
+  }
+)
+
+ dados <- reactive({
+    req(input$file1)
+    df = read.csv(input$file1$datapath)
+  
+  })
+   
+```
+
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Graficos
+
+```{r}
+
+renderPlot({
+
+  # rand <- rnorm(input$cluster)
+	# hist(rand, breaks = input$ajust)
+  plot(trend())
+})
+	
+```
+
+### Dados
+
+```{r}
+renderTable({dados()})
+
+
+
+```
+
+
+
+
