@@ -13,7 +13,9 @@ Painel de Controle de Dados em R
 ### ```{r}      ```
   Estabelece o espaço (scope) dos comandos   
 
-### selctInput, sliderInput, fileInput, pickerInput
+###  Entrada para Formularios
+
+``` selctInput, sliderInput, fileInput, pickerInput ```
 
 
 
