@@ -2,8 +2,21 @@
 Painel de Controle de Dados em R
 
 ## BIBLIOTECAS NECESSÁRIAS
+Library(Shiny)
+Library(RMarkdown)
 
 ## INSTALAÇÃO
+
+1º) Instalação do R<br />
+$ sudo apt-get install r-base r-base-core
+
+2º) Instalação do pacote Shiny
+3º) Instalação do Shiny-Server
+4º)
+
+## PRINCIPAIS COMANDOS PARA INSTALAÇÃO
+ - Parar/ Iniciar/ Restartar/Status servidor Shiny
+$ sudo systemctl stop/start/restart/status shiny-server
 
 ## PRINCIPAIS COMANDOS
 
@@ -17,8 +30,10 @@ Painel de Controle de Dados em R
 
 ``` selctInput, sliderInput, fileInput, pickerInput ```
 
-teste
-teste2
+## LINKS
+https://www.digitalocean.com/community/tutorials/how-to-set-up-shiny-server-on-ubuntu-16-04
+http://docs.rstudio.com/shiny-server/#install-shiny
+
 ## EXEMPLOS
 
 
