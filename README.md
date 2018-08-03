@@ -18,6 +18,7 @@ Painel de Controle de Dados em R
 ``` selctInput, sliderInput, fileInput, pickerInput ```
 
 teste
+teste2
 ## EXEMPLOS
 
 
