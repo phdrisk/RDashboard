@@ -10,7 +10,7 @@ Painel de Controle de Dados em R
 ### Column {data-width=150}
   Similar ao frameset (html), cria uma coluna com x pixels
 
-### ```{r}      ```
+### ```{r}      ```  
   Estabelece o espaço (scope) dos comandos   
 
 ###  Entrada para Formularios
