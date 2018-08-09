@@ -10,8 +10,18 @@ Library(RMarkdown)
 1º) Instalação do R<br />
 $ sudo apt-get install r-base r-base-core
 
-2º) Instalação do pacote Shiny
-3º) Instalação do Shiny-Server
+2º) Instalar o Rstudio <br>
+https://www.rstudio.com/products/rstudio/download/#download -> RStudio 1.1.456 - Ubuntu 16.04+/Debian 9+ (64-bit)
+
+
+3º) Instalação do pacote Shiny (importante que seja dessa forma) <br>
+
+sudo su - -c "R -e \"install.packages('shiny', repos='http://cran.rstudio.com/')\""
+
+4º) Instalação do Shiny-Server <br>
+wget https://download3.rstudio.org/ubuntu-12.04/x86_64/shiny-server-1.5.5.872-amd64.deb
+sudo gdebi shiny-server-1.5.5.872-amd64.deb
+
 4º)
 
 ## PRINCIPAIS COMANDOS PARA INSTALAÇÃO
