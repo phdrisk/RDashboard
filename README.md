@@ -19,10 +19,10 @@ https://www.rstudio.com/products/rstudio/download/#download -> RStudio 1.1.456 -
 sudo su - -c "R -e \"install.packages('shiny', repos='http://cran.rstudio.com/')\""
 
 4º) Instalação do Shiny-Server <br>
-wget https://download3.rstudio.org/ubuntu-12.04/x86_64/shiny-server-1.5.5.872-amd64.deb
+wget https://download3.rstudio.org/ubuntu-12.04/x86_64/shiny-server-1.5.5.872-amd64.deb<br>
 sudo gdebi shiny-server-1.5.5.872-amd64.deb
 
-4º)
+5º)
 
 ## PRINCIPAIS COMANDOS PARA INSTALAÇÃO
  - Parar/ Iniciar/ Restartar/Status servidor Shiny
